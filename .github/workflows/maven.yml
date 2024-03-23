@@ -25,7 +25,12 @@ jobs:
     - uses: actions/upload-artifact@v4
       with:
         name: my-artifact
-        path: target  
+        path: target 
+    - name: SonarQube Scan
+      uses: sonarsource/sonarqube-scan-action@master
+      env:
+        SONAR_TOKEN: ${{squ_47d1907e7ac63876ed151a4b1516076148c0ff6c }}
+        SONAR_HOST_URL: ${{ http://52.146.20.111:9000 }}   
       
 
 
